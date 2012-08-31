@@ -1,0 +1,55 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <!--script type="text/javascript" src="../jsjac.js"></script-->
+    <!-- comment in above and uncomment below if you want to modify/hack on jsjac -->
+    <script type="text/javascript" src="./js/JSJaC.js" ></script>
+
+    <!-- if you want to enable debugging uncomment line below
+         debugger available at http://svn.stefan-strigler.de/JSDebugger/trunk -->
+    <!--script type="text/javascript" src="Debugger.js"></script-->
+
+    <script type="text/javascript" src="./xmpp-t.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="./css/body.css" />
+	
+    <title>教师客户端</title>
+  </head>
+  
+  <body>
+	<h1><a href="#" onclick="location.reload();">教师客户端</a></h1>
+	<div id="tool_panel" style="display:none;">
+		<a href="#" onclick="goFirst()">首页<a> | 
+		<a href="#" onclick="goPrev()">上一页<a> | 
+		<a href="#" onclick="goNext()">下一页<a> | 
+		<a href="#" onclick="return quit()">注销<a> | 
+	</div>
+	
+	<div id="login_panel">
+		<h2>登录(im.cd)</h2>
+		<form name="loginForm" onSubmit="return doLogin(this);" action="#">
+		<table>
+			<tr><th><label for="server"> 域 </label></th><td><input type="text" name="server" id="server"  value="im.cd"/></td></tr>
+			<tr><th><label for="username">用户</label></th><td><input type="text" name="username" id="username" value="t1"/></td></tr>
+			<tr><th><label for="password">密码</label></th><td><input type="password" name="password" id="password" value="hello"/></td></tr>
+			<tr><td>&nbsp;</td><td><input type="submit" value="登录"></td></tr>
+		</table>
+		</form>
+	</div>
+
+	<div id="sendmsg_panel" style="display:none;">
+		<form name="sendForm" onSubmit="return sendMsg(this);" action="#">
+			发送消息：<br>
+			<textarea name="msg" id='msgArea' rows="3" cols="80" tabindex="2"></textarea><br>
+			<input type="submit" value="Send" tabindex="3"> </div>
+		</form>
+    </div>
+	
+	<div id="content_panel"></div>
+	<div id="info_panel"></div>
+  </body>
+</html>

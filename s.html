@@ -1,0 +1,40 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <!--script type="text/javascript" src="../jsjac.js"></script-->
+    <!-- comment in above and uncomment below if you want to modify/hack on jsjac -->
+    <script type="text/javascript" src="./js/JSJaC.js" ></script>
+
+    <!-- if you want to enable debugging uncomment line below
+         debugger available at http://svn.stefan-strigler.de/JSDebugger/trunk -->
+    <!--script type="text/javascript" src="Debugger.js"></script-->
+
+    <script type="text/javascript" src="./xmpp-s.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="./css/body.css" />
+	
+    <title>学生客户端</title>
+  </head>
+  
+  <body>
+	<h1><a href="#" onclick="location.reload();">学生客户端</a></h1>
+	<div id="err"></div>
+	<div id="status_panel"></div>
+	<div id="login_pane">
+		<h2>登录(im.cd)</h2>
+		<form name="loginForm" onSubmit="return doLogin(this);" action="#">
+		<table>
+			<tr><th><label for="server"> 域 </label></th><td><input type="text" name="server" id="server" tabindex="4" value="im.cd"/></td></tr>
+			<tr><th><label for="username">学 号</label></th><td><input type="text" name="username" id="username" tabindex="5"/></td></tr>
+			<tr><th><label for="password">密 码</label></th><td><input type="password" name="password" id="password" tabindex="6" /></td></tr>
+			<tr><td>&nbsp;</td><td><input type="submit" value="登录" tabindex="7"></td></tr>
+		</table></form>
+	</div>
+	
+	<div id="content_panel"></div>
+  </body>
+</html>
